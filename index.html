@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohand Moustafa — Data Analyst Portfolio</title>
-<meta name="description" content="Mohand Moustafa — Computer Science & Statistics student specializing in Data Analytics and Machine Learning.">
+<title>Mohand Moustafa — AI Training &amp; Evaluation | Machine Learning</title>
+<meta name="description" content="Mohand Moustafa — Computer Science &amp; Statistics student and ML trainee focused on AI training &amp; evaluation, machine learning, and mathematics &amp; statistics.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -127,6 +127,8 @@
     transition: color 0.2s ease;
   }
   nav.links a:hover{ color: var(--gold); }
+  nav.links a.btn-primary,
+  nav.links a.btn-primary:hover{ color: #17130A; }
 
   .btn{
     font-family: var(--font-mono);
@@ -164,7 +166,7 @@
     position: absolute;
     top: -120px; left: 50%;
     transform: translateX(-50%);
-    width: 640px; height: 420px;
+    width: min(640px, 100%); height: 420px;
     background: radial-gradient(closest-side, rgba(232,169,59,0.10), transparent 70%),
                 radial-gradient(closest-side, rgba(63,208,201,0.08), transparent 70%);
     z-index: -1;
@@ -200,7 +202,7 @@
   .hero p.sub{
     color: var(--text-muted);
     font-size: 17px;
-    max-width: 560px;
+    max-width: 620px;
     margin-bottom: 34px;
   }
 
@@ -243,6 +245,10 @@
   .section-head{ margin-bottom: 44px; }
   .section-head h2{ font-size: clamp(26px, 3.2vw, 34px); margin-top: 12px; }
 
+  section.wrap{ padding-top: 80px; padding-bottom: 80px; }
+  section.hero.wrap{ padding-top: 96px; padding-bottom: 72px; }
+  section#about.wrap{ padding-top: 40px; }
+
   .reveal{ opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .reveal.in{ opacity: 1; transform: none; }
   @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
@@ -278,7 +284,7 @@
   /* ---------- skills ---------- */
   .skills-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 18px;
   }
   .skill-card{
@@ -326,7 +332,7 @@
     flex-wrap: wrap;
   }
   .project-top h3{ font-size: 21px; }
-  .project-year{ font-family: var(--font-mono); font-size: 12.5px; color: var(--text-faint); padding-top: 4px; }
+  .project-year{ font-family: var(--font-mono); font-size: 12.5px; color: var(--text-faint); padding-top: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
   .project-obj{ color: var(--text-muted); font-size: 15px; margin: 10px 0 16px; max-width: 640px; }
   .project-card .chip-row{ margin-bottom: 20px; }
   .project-card .chip{ color: var(--text-faint); border-color: var(--border-soft); }
@@ -429,7 +435,6 @@
 
   /* ---------- responsive ---------- */
   @media (max-width: 900px){
-    .skills-grid{ grid-template-columns: repeat(2, 1fr); }
     .about-grid{ grid-template-columns: 1fr; }
   }
   @media (max-width: 700px){
@@ -478,8 +483,8 @@
   <section class="hero wrap">
     <p class="terminal-line" id="terminalLine"><span class="prompt">mohand@career:~$</span> </p>
 
-    <h1>Turning raw data into<br><span class="accent">decisions worth acting on.</span></h1>
-    <p class="sub">I'm Mohand Moustafa, a Computer Science &amp; Statistics student at Helwan University, specializing in data analytics and machine learning — from cleaning messy datasets in Python to shipping KPI dashboards in Power BI.</p>
+    <h1>Evaluating models and auditing data<br><span class="accent">with statistical rigor.</span></h1>
+    <p class="sub">I'm Mohand Moustafa, a Computer Science &amp; Statistics student at Helwan University and machine learning trainee — building and comparing models, auditing datasets for issues like label leakage, and explaining the results clearly.</p>
 
     <div class="hero-ctas">
       <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -488,10 +493,10 @@
     </div>
 
     <div class="kpi-row">
-      <div class="kpi-tile"><span class="kpi-num" data-target="15000" data-suffix="+">0</span><span class="kpi-label">Records Analyzed</span></div>
-      <div class="kpi-tile"><span class="kpi-num" data-target="2" data-suffix="">0</span><span class="kpi-label">Dashboards Shipped</span></div>
+      <div class="kpi-tile"><span class="kpi-num" data-target="4" data-suffix="">0</span><span class="kpi-label">Selected Projects</span></div>
+      <div class="kpi-tile"><span class="kpi-num" data-target="70" data-suffix="K+">0</span><span class="kpi-label">Customers in Churn Analysis</span></div>
       <div class="kpi-tile"><span class="kpi-num" data-target="3.64" data-decimals="2" data-suffix="">0</span><span class="kpi-label">GPA / 4.00</span></div>
-      <div class="kpi-tile"><span class="kpi-num" data-target="2" data-suffix="">0</span><span class="kpi-label">Certificates Earned/In Progress</span></div>
+      <div class="kpi-tile"><span class="kpi-num" data-target="5" data-suffix="">0</span><span class="kpi-label">Trainings &amp; Certificates</span></div>
     </div>
   </section>
 
@@ -499,13 +504,13 @@
   <section id="about" class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">About</span>
-      <h2>Statistics-minded, dashboard-obsessed.</h2>
+      <h2>Statistics-minded, evaluation-first.</h2>
     </div>
     <div class="about-grid reveal">
       <div>
-        <p><strong>My path started in code and landed in data.</strong> I came into Computer Science curious about how systems work, and found my focus in the layer where numbers turn into decisions — statistics, analytics, and the tools that make data usable for people who aren't analysts themselves.</p>
-        <p>Today that means writing Python to clean and explore real-world datasets, building KPI dashboards in Excel and Power BI, and querying data with SQL. I'm currently deepening my machine learning foundations through <strong>DEPI's AI &amp; Data Science track</strong> (Microsoft Machine Learning Engineer specialization), while building a portfolio of end-to-end analytics projects.</p>
-        <p>I'm looking for a <strong>Data Analyst or Machine Learning internship</strong> where I can apply that toolkit to real business problems — and keep learning from people who've been doing this longer than I have.</p>
+        <p><strong>My path started in code and landed in data.</strong> I came into Computer Science curious about how systems work, and found my focus where statistics meets machine learning — probability, linear algebra, and the careful evaluation that tells you whether a model can actually be trusted.</p>
+        <p>Today that means building ML pipelines in Python, comparing candidate models with confusion matrices and error analysis, and auditing data for problems like <strong>label leakage</strong>. My projects range from a multimodal phishing detector and a voice-controlled Linux system to churn analytics and BI dashboards. I completed the <strong>Machine Learning training at ITI</strong> and I'm now continuing with <strong>DEPI's AI &amp; Data Science track</strong> (Microsoft Machine Learning Engineer).</p>
+        <p>I'm interested in <strong>AI training and evaluation work</strong> — tasks that call for rigorous reasoning, careful instruction-following, consistency checking, and clear written explanations — as well as machine learning and data internships.</p>
       </div>
       <div class="facts-panel">
         <dl>
@@ -514,7 +519,8 @@
           <dt>Program</dt><dd>Computer Science &amp; Statistics</dd>
           <dt>GPA</dt><dd>3.64 / 4.00</dd>
           <dt>Graduation</dt><dd>Expected 2028</dd>
-          <dt>Languages</dt><dd>Arabic (Native), English (B2)</dd>
+          <dt>Focus</dt><dd>AI Training &amp; Evaluation, Machine Learning</dd>
+          <dt>Languages</dt><dd>Arabic (Native), English (B2 — Upper Intermediate)</dd>
         </dl>
       </div>
     </div>
@@ -528,39 +534,27 @@
     </div>
     <div class="skills-grid reveal">
       <div class="skill-card">
-        <h3>Programming</h3>
+        <h3>AI / Machine Learning</h3>
         <div class="chip-row">
-          <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">C++</span><span class="chip">JavaScript (Basic)</span>
+          <span class="chip">Supervised Learning</span><span class="chip">Classification</span><span class="chip">Feature Engineering</span><span class="chip">Model Comparison &amp; Evaluation</span><span class="chip">Confusion Matrices</span><span class="chip">Error Analysis</span><span class="chip">Dataset Auditing</span><span class="chip">Label-Leakage Checks</span><span class="chip">NLP (TF-IDF)</span><span class="chip">scikit-learn</span><span class="chip">XGBoost</span>
         </div>
       </div>
       <div class="skill-card">
-        <h3>Data Analysis &amp; Visualization</h3>
+        <h3>Math &amp; Statistics</h3>
         <div class="chip-row">
-          <span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">EDA</span><span class="chip">Data Cleaning</span><span class="chip">KPI Analysis</span>
+          <span class="chip">Probability</span><span class="chip">Random Variables &amp; Distributions</span><span class="chip">Conditional Probability</span><span class="chip">Bayes’ Theorem</span><span class="chip">Descriptive &amp; Inferential Statistics</span><span class="chip">Hypothesis Testing</span><span class="chip">Correlation</span><span class="chip">Regression</span><span class="chip">Vectors</span><span class="chip">Matrices</span><span class="chip">Linear Transformations</span>
         </div>
       </div>
       <div class="skill-card">
-        <h3>BI &amp; Reporting</h3>
+        <h3>Programming &amp; Data</h3>
         <div class="chip-row">
-          <span class="chip">Power BI</span><span class="chip">Excel Pivot Tables</span><span class="chip">Power Query</span><span class="chip">Conditional Formatting</span>
+          <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">C++</span><span class="chip">JavaScript (Basic)</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">Data Cleaning</span><span class="chip">Preprocessing</span><span class="chip">EDA</span>
         </div>
       </div>
       <div class="skill-card">
-        <h3>Database</h3>
+        <h3>Tools &amp; Reporting</h3>
         <div class="chip-row">
-          <span class="chip">SQL</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <h3>Tools &amp; Platforms</h3>
-        <div class="chip-row">
-          <span class="chip">Excel</span><span class="chip">Power BI</span><span class="chip">Git</span><span class="chip">GitHub</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <h3>Currently Learning</h3>
-        <div class="chip-row">
-          <span class="chip">Machine Learning</span><span class="chip">Deep Learning</span><span class="chip">Computer Vision</span><span class="chip">NLP</span>
+          <span class="chip">Git/GitHub (branches, issues, PRs)</span><span class="chip">Jupyter</span><span class="chip">pytest</span><span class="chip">Excel</span><span class="chip">Power Query</span><span class="chip">Power BI</span>
         </div>
       </div>
     </div>
@@ -570,62 +564,103 @@
   <section id="projects" class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Case Studies</span>
-      <h2>Projects</h2>
+      <h2>Selected projects</h2>
     </div>
 
     <div class="project-card reveal">
       <div class="project-top">
-        <h3>Restaurant Sales Analysis Dashboard</h3>
-        <span class="project-year">2026</span>
+        <h3>PhishGuard AI — Multimodal Phishing Website Detector</h3>
+        <span class="project-year">Graduation Project · Team</span>
       </div>
-      <p class="project-obj">Cleaned, analyzed, and visualized 15,000+ restaurant sales records to surface trends in customer behavior and product performance.</p>
+      <p class="project-obj">A browser-extension workflow that combines URL/domain, page-structure, and screenshot-based signals to detect phishing websites.</p>
       <div class="chip-row">
-        <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">SQL</span><span class="chip">Excel</span><span class="chip">Power Query</span><span class="chip">Power BI</span>
+        <span class="chip">Vision Transformer</span><span class="chip">OCR</span><span class="chip">Logo Detection</span><span class="chip">URL/Domain Features</span><span class="chip">HTML/DOM Structure</span><span class="chip">OpenPhish</span><span class="chip">Tranco</span>
       </div>
       <ul class="bullets">
-        <li>Cleaned and preprocessed a 15,000+ record dataset using Python (Pandas), resolving missing values, duplicates, and inconsistent data types.</li>
-        <li>Performed exploratory data analysis (EDA) to uncover sales trends, customer behavior patterns, and key performance drivers.</li>
-        <li>Built KPIs, pivot tables, and pivot charts in Excel to track revenue, order volume, and product-level performance.</li>
-        <li>Designed an interactive Power BI dashboard translating findings into actionable business recommendations.</li>
+        <li>Team graduation project combining URL/domain features, HTML/DOM structure, and screenshot-based signals (OCR, logo detection, and a Vision Transformer) in a browser-extension workflow.</li>
+        <li>Built data from OpenPhish and Tranco sources; audited feature/label construction and identified label leakage, then revised the plan toward clean public data and fresh-data generalization checks.</li>
+        <li>Debugged data-pipeline issues including missing WHOIS data and incorrect domain-age inheritance for free-hosting subdomains.</li>
+      </ul>
+      <a class="project-link" href="https://github.com/mohand-moustafa/PhishGuard-AI" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-top">
+        <h3>AI Sound OS — Voice-Controlled Linux System</h3>
+        <span class="project-year">NLP · Speech</span>
+      </div>
+      <p class="project-obj">A voice-to-action pipeline that turns spoken commands into Linux actions through intent classification.</p>
+      <div class="chip-row">
+        <span class="chip">Python</span><span class="chip">Whisper</span><span class="chip">TF-IDF</span><span class="chip">Logistic Regression</span><span class="chip">pytest</span><span class="chip">Confusion Matrix</span>
+      </div>
+      <ul class="bullets">
+        <li>Built a voice-to-action pipeline using Whisper speech-to-text, TF-IDF + Logistic Regression intent classification, parameter extraction, and Python-based Linux command execution.</li>
+        <li>Handled eight command intents plus an UNKNOWN class; compared four candidate models and evaluated with metrics, confusion matrix, error analysis, and pytest tests.</li>
+      </ul>
+      <a class="project-link" href="https://github.com/mohand-moustafa/AI-Sound-OS" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-top">
+        <h3>Telecom Customer Churn Analysis</h3>
+        <span class="project-year">Data Analysis</span>
+      </div>
+      <p class="project-obj">Explored churn patterns across a telecom dataset of approximately 70,000 customers.</p>
+      <div class="chip-row">
+        <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">EDA</span><span class="chip">Feature Engineering</span><span class="chip">Correlation Analysis</span>
+      </div>
+      <ul class="bullets">
+        <li>Cleaned data, handled outliers, engineered features, and performed correlation analysis/EDA on a telecom dataset of approximately 70,000 customers.</li>
+        <li>Examined churn patterns by usage and tenure, including a 77.9% churn rate among customers with zero usage in the latest month versus 4.4% among active customers.</li>
+      </ul>
+      <a class="project-link" href="https://github.com/mohand-moustafa/telecom-customer-churn-analytics" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-top">
+        <h3>Restaurant Sales Analytics &amp; Power BI Dashboard</h3>
+        <span class="project-year">Analytics · BI</span>
+      </div>
+      <p class="project-obj">Cleaned, modeled, and visualized 15,000+ restaurant sales records to surface sales and product performance.</p>
+      <div class="chip-row">
+        <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Star Schema</span><span class="chip">Excel</span><span class="chip">Power BI</span>
+      </div>
+      <ul class="bullets">
+        <li>Cleaned and prepared 15,000+ sales records in Python.</li>
+        <li>Built a Star Schema and wrote 38+ SQL queries to analyze sales performance.</li>
+        <li>Created Excel KPIs and an interactive Power BI dashboard.</li>
       </ul>
       <a class="project-link" href="https://github.com/mohand-moustafa/nakhat-al-sharq-sales-analytics" target="_blank" rel="noopener">View on GitHub ↗</a>
     </div>
 
-    <div class="project-card reveal">
-      <div class="project-top">
-        <h3>Sales Performance Analysis Dashboard</h3>
-        <span class="project-year">2026</span>
-      </div>
-      <p class="project-obj">Explored regional and product-level sales performance, calculating KPIs and building visualizations to support data-driven recommendations.</p>
-      <div class="chip-row">
-        <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">Excel</span>
-      </div>
-      <ul class="bullets">
-        <li>Collected and explored sales data, applying data cleaning and transformation techniques in Python to prepare it for analysis.</li>
-        <li>Calculated KPIs and performed EDA to evaluate performance across products and regions.</li>
-        <li>Built visualizations with Matplotlib and Seaborn to communicate trends and support data-driven decision-making.</li>
-        <li>Presented business recommendations derived from the dashboard, highlighting opportunities for revenue growth.</li>
-      </ul>
-      <a class="project-link" href="https://github.com/mohand-moustafa/telecom-customer-churn-analytics" target="_blank" rel="noopener">View on GitHub ↗</a>
-    </div>
   </section>
 
   <!-- TIMELINE -->
   <section id="timeline" class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Record</span>
-      <h2>Education &amp; certifications</h2>
+      <h2>Education, training &amp; certifications</h2>
     </div>
     <div class="timeline reveal">
+      <div class="t-item in-progress">
+        <div class="t-date">Expected 2028</div>
+        <div class="t-title">B.Sc. Computer Science &amp; Statistics <span class="t-status">In Progress</span></div>
+        <div class="t-desc">Faculty of Science, Helwan University — GPA 3.64 / 4.00. Coursework: Probability, Statistics, Linear Algebra, Data Science, Python for Data Analytics, Data Structures, Algorithms, Database Systems.</div>
+      </div>
+      <div class="t-item in-progress">
+        <div class="t-date">2026 — Present</div>
+        <div class="t-title">DEPI — AI &amp; Data Science, Microsoft Machine Learning Engineer Track <span class="t-status">In Progress</span></div>
+        <div class="t-desc">Project-based training in Python, statistics, machine learning, and deep-learning fundamentals.</div>
+      </div>
+      <div class="t-item">
+        <div class="t-date">July — August 2026</div>
+        <div class="t-title">Machine Learning Training — Information Technology Institute (ITI) <span class="t-status">Completed</span></div>
+        <div class="t-desc">Completed two-month training in core ML concepts and hands-on model building.</div>
+      </div>
       <div class="t-item">
         <div class="t-date">February 2026</div>
         <div class="t-title">Microsoft Data Analyst Professional Certificate <span class="t-status">Completed</span></div>
         <div class="t-desc">Professional certification covering the data analyst toolkit and workflow.</div>
-      </div>
-      <div class="t-item in-progress">
-        <div class="t-date">July 2026 — Present</div>
-        <div class="t-title">DEPI — AI &amp; Data Science Internship <span class="t-status">In Progress</span></div>
-        <div class="t-desc">Microsoft Machine Learning Engineer track — Python, ML, Deep Learning, NLP, Computer Vision.</div>
       </div>
       <div class="t-item in-progress">
         <div class="t-date">Ongoing</div>
@@ -637,11 +672,6 @@
         <div class="t-title">CS50: Introduction to Computer Science</div>
         <div class="t-desc">Harvard University.</div>
       </div>
-      <div class="t-item in-progress">
-        <div class="t-date">Expected 2028</div>
-        <div class="t-title">B.S. Computer Science &amp; Statistics <span class="t-status">In Progress</span></div>
-        <div class="t-desc">Faculty of Science, Helwan University — GPA 3.64 / 4.00.</div>
-      </div>
     </div>
   </section>
 
@@ -649,7 +679,7 @@
   <section id="contact" class="wrap">
     <div class="contact-band reveal">
       <span class="eyebrow">Get in touch</span>
-      <h2 style="margin-top:14px;">Open to Data Analyst &amp; Machine Learning internships.</h2>
+      <h2 style="margin-top:14px;">Open to AI training &amp; evaluation work and ML internships.</h2>
       <p>Based in Giza, Egypt — happy to work remotely or on-site. The fastest way to reach me is email.</p>
       <div class="contact-links">
         <a class="btn btn-primary" href="mailto:mouhanadmoustafa678@gmail.com">mouhanadmoustafa678@gmail.com</a>
@@ -663,7 +693,7 @@
 </main>
 
 <footer>
-  <p>// built by Mohand Moustafa — updated August 2026</p>
+  <p>// built by Mohand Moustafa — updated October 2026</p>
 </footer>
 
 <script>
@@ -685,7 +715,7 @@
   const terminalEl = document.getElementById('terminalLine');
   const promptText = 'mohand@career:~$ ';
   const typed = 'whoami';
-  const response = ' → Aspiring Data Analyst & ML Engineer in training';
+  const response = ' → ML & Data Science Trainee · AI Training & Evaluation';
 
   function typeTerminal(){
     if(reduceMotion){
